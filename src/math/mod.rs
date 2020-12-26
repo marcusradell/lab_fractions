@@ -2,10 +2,7 @@ pub struct Fraction(i64);
 
 impl Fraction {
     pub fn add(self, other: &Fraction) -> Fraction {
-        if self.0 > 0 {
-            return Fraction(self.0 + other.0);
-        }
-        Fraction(other.0)
+        Fraction(self.0 + other.0)
     }
 
     pub fn to_int(&self) -> i64 {
