@@ -2,11 +2,13 @@
 
 ## Scenarios
 
+Kernel
+
 Negative
 
 Reduce
 
-Common factor 
+Common factor
 
 Negative denominator
 
