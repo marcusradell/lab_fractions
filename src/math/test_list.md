@@ -12,6 +12,8 @@ Common factor
 
 Negative denominator
 
+Equals
+
 ## Examples
 
 1/2 + 1/3 = 5/6
