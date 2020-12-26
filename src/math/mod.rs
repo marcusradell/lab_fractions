@@ -1,11 +1,11 @@
 pub struct Fraction(i64);
 
 impl Fraction {
-    pub fn add<'a>(&'a self, other: &'a Fraction) -> &'a Fraction {
+    pub fn add(self, other: &Fraction) -> Fraction {
         if self.0 > 0 {
-            return self;
+            return Fraction(self.0 + other.0);
         }
-        other
+        Fraction(other.0)
     }
 
     pub fn to_int(&self) -> i64 {
@@ -31,8 +31,8 @@ fn add_zero_to_non_zero() {
     assert_eq!(5, result.to_int())
 }
 
-// #[test]
-// fn non_negative_zero_operands() {
-//     let result: &Fraction = Fraction(3).add(&Fraction(4));
-//     assert_eq!(7, result.to_int())
-// }
+#[test]
+fn non_zero_integers() {
+    let result = Fraction(3).add(&Fraction(4));
+    assert_eq!(7, result.to_int())
+}
