@@ -12,24 +12,24 @@ impl Fraction {
 
 #[test]
 fn add_zero_to_zero() {
-    let result = Fraction(0).add(Fraction(0));
-    assert_eq!(0, result.to_int());
+    let result = Fraction(0).add(Fraction(0)).to_int();
+    assert_eq!(0, result);
 }
 
 #[test]
 fn add_non_zero_to_zero() {
-    let result = Fraction(0).add(Fraction(3));
-    assert_eq!(3, result.to_int())
+    let result = Fraction(0).add(Fraction(3)).to_int();
+    assert_eq!(3, result)
 }
 
 #[test]
 fn add_zero_to_non_zero() {
-    let result = Fraction(5).add(Fraction(0));
-    assert_eq!(5, result.to_int())
+    let result = Fraction(5).add(Fraction(0)).to_int();
+    assert_eq!(5, result)
 }
 
 #[test]
 fn non_zero_integers() {
-    let result = Fraction(3).add(Fraction(4));
-    assert_eq!(7, result.to_int())
+    let result = Fraction(3).add(Fraction(4)).to_int();
+    assert_eq!(7, result)
 }
