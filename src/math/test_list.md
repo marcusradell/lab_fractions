@@ -2,7 +2,7 @@
 
 ## Scenarios
 
-Kernel
+[x] Kernel
 
 Negative
 
