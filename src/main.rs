@@ -1,3 +1,5 @@
-pub mod math;
+use lab_fractions::math::Fraction;
 
-fn main() {}
+fn main() {
+    println!("{:?}", Fraction::new(3, 5));
+}

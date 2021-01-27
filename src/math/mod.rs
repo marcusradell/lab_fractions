@@ -1,6 +1,8 @@
+pub mod equals;
+
 #[allow(dead_code)]
-#[derive(Debug)]
-struct Fraction {
+#[derive(Debug, PartialEq, Eq)]
+pub struct Fraction {
     numerator: i64,
     denominator: i64,
 }
