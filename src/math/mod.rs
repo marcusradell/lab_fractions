@@ -1,4 +1,5 @@
 #[allow(dead_code)]
+#[derive(Debug)]
 struct Fraction {
     numerator: i64,
     denominator: i64,
@@ -24,8 +25,12 @@ impl Fraction {
         }
     }
 
-    pub fn to_i64(&self) -> i64 {
+    pub fn get_numerator(&self) -> i64 {
         self.numerator
+    }
+
+    pub fn get_denominator(&self) -> i64 {
+        self.denominator
     }
 }
 
@@ -35,32 +40,40 @@ mod tests {
 
     #[test]
     fn add_zero_to_zero() {
-        let result = Fraction::from_int(0).add(Fraction::from_int(0)).to_i64();
+        let result = Fraction::from_int(0)
+            .add(Fraction::from_int(0))
+            .get_numerator();
         assert_eq!(0, result);
     }
 
     #[test]
     fn add_non_zero_to_zero() {
-        let result = Fraction::from_int(0).add(Fraction::from_int(3)).to_i64();
+        let result = Fraction::from_int(0)
+            .add(Fraction::from_int(3))
+            .get_numerator();
         assert_eq!(3, result)
     }
 
     #[test]
     fn add_zero_to_non_zero() {
-        let result = Fraction::from_int(5).add(Fraction::from_int(0)).to_i64();
+        let result = Fraction::from_int(5)
+            .add(Fraction::from_int(0))
+            .get_numerator();
         assert_eq!(5, result)
     }
 
     #[test]
     fn non_zero_integers() {
-        let result = Fraction::from_int(3).add(Fraction::from_int(4)).to_i64();
+        let result = Fraction::from_int(3)
+            .add(Fraction::from_int(4))
+            .get_numerator();
         assert_eq!(7, result)
     }
 
     #[test]
     fn non_trivial_denominator() {
         let result = Fraction::new(1, 5).add(Fraction::new(2, 5));
-        assert_eq!(3, result.numerator);
-        assert_eq!(5, result.denominator);
+        assert_eq!(3, result.get_numerator());
+        assert_eq!(5, result.get_denominator());
     }
 }
