@@ -1,8 +1,7 @@
 mod equals_test;
 mod fractions_test;
 
-#[allow(dead_code)]
-#[derive(Debug, PartialEq, Eq)]
+#[derive(Debug, PartialEq, Eq, Hash)]
 pub struct Fraction {
     numerator: i64,
     denominator: i64,
