@@ -26,12 +26,4 @@ impl Fraction {
             denominator: self.denominator,
         }
     }
-
-    pub fn get_numerator(&self) -> i64 {
-        self.numerator
-    }
-
-    pub fn get_denominator(&self) -> i64 {
-        self.denominator
-    }
 }
