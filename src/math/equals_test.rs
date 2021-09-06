@@ -30,5 +30,6 @@ mod tests {
     #[test]
     fn negative_denominator() {
         assert_eq!(Fraction::new(1, 2), Fraction::new(-1, -2));
+        assert_eq!(Fraction::new(-1, 2), Fraction::new(1, -2));
     }
 }
