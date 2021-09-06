@@ -1,3 +1,4 @@
+#[cfg(test)]
 mod tests {
     use crate::math::Fraction;
 
@@ -6,8 +7,8 @@ mod tests {
         assert_eq!(Fraction::new(3, 4), Fraction::new(3, 4));
     }
 
-    // #[test]
-    fn _reduce_to_not_whole_numbers() {
+    #[test]
+    fn reduce_to_not_whole_numbers() {
         assert_eq!(Fraction::new(3, 4), Fraction::new(6, 8));
     }
 }

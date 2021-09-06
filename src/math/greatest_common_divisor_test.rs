@@ -1,3 +1,4 @@
+#[allow(dead_code)]
 fn gcd(a: i64, b: i64) -> i64 {
     let mut b = b;
     let mut a = a;
@@ -10,6 +11,7 @@ fn gcd(a: i64, b: i64) -> i64 {
     a.abs()
 }
 
+#[cfg(test)]
 mod tests {
     use super::*;
 
