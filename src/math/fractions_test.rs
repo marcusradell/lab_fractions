@@ -36,4 +36,11 @@ mod tests {
         let result = Fraction::new(1, 5).add(Fraction::new(2, 5));
         assert_eq!(expected, result);
     }
+
+    #[test]
+    fn different_denominators_no_reduction() {
+        let expected = Fraction::new(5, 6);
+        let result = Fraction::new(1, 2).add(Fraction::new(1, 3));
+        assert_eq!(expected, result);
+    }
 }

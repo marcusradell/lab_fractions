@@ -12,7 +12,7 @@ Common factor
 
 Negative denominator
 
-Equals
+[x] Equals
 
 ## Examples
 
