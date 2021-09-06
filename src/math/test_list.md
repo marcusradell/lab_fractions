@@ -6,7 +6,7 @@
 
 Negative
 
-Reduce
+[x] Reduce
 
 Common factor
 

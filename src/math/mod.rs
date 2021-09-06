@@ -24,16 +24,9 @@ impl Fraction {
     }
 
     pub fn add(self, other: Fraction) -> Fraction {
-        if self.denominator != other.denominator {
-            return Fraction::new(
-                self.numerator * other.denominator + other.numerator * self.denominator,
-                self.denominator * other.denominator,
-            );
-        }
-
-        Fraction {
-            numerator: self.numerator + other.numerator,
-            denominator: self.denominator,
-        }
+        Fraction::new(
+            self.numerator * other.denominator + other.numerator * self.denominator,
+            self.denominator * other.denominator,
+        )
     }
 }

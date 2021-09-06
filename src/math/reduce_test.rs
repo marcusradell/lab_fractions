@@ -21,4 +21,12 @@ mod tests {
     fn reduce_zero() {
         assert_eq!(Fraction::from_int(0), Fraction::new(0, 24654));
     }
+
+    #[test]
+    fn reduce_result_to_whole_number() {
+        assert_eq!(
+            Fraction::from_int(1),
+            Fraction::new(1, 3).add(Fraction::new(2, 3))
+        );
+    }
 }
