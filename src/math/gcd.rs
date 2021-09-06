@@ -48,4 +48,12 @@ mod tests {
         assert_eq!(4, gcd(-24, 28));
         assert_eq!(4, gcd(24, -28));
     }
+
+    // Characterization tests. This is not a behavior I would want.
+    #[test]
+    fn zero() {
+        assert_eq!(1, gcd(1, 0));
+        assert_eq!(5, gcd(0, 5));
+        assert_eq!(0, gcd(0, 0));
+    }
 }
