@@ -4,7 +4,7 @@ mod tests {
 
     #[test]
     fn same_numerator_and_denominator() {
-        assert_eq!(Fraction::new(3, 5), Fraction::new(3, 5));
+        assert_eq!(Fraction::new(3, 5), Fraction::new(3, 5))
     }
 
     #[test]
@@ -24,6 +24,6 @@ mod tests {
 
     #[test]
     fn whole_numbers_not_equal() {
-        assert_ne!(Fraction::from_int(6), Fraction::from_int(5));
+        assert_ne!(Fraction::from_int(6), Fraction::from_int(5))
     }
 }
