@@ -43,4 +43,12 @@ mod tests {
         let result = Fraction::new(1, 2).add(Fraction::new(1, 3));
         assert_eq!(expected, result);
     }
+
+    #[test]
+    fn reduce_result_to_whole_number() {
+        assert_eq!(
+            Fraction::from_int(1),
+            Fraction::new(1, 3).add(Fraction::new(2, 3))
+        );
+    }
 }
