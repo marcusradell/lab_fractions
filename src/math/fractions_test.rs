@@ -51,4 +51,45 @@ mod tests {
             Fraction::new(1, 3).add(Fraction::new(2, 3))
         );
     }
+
+    #[test]
+
+    fn denominator_multiple_of_other() {
+        assert_eq!(
+            Fraction::new(11, 8),
+            Fraction::new(3, 4).add(Fraction::new(5, 8))
+        )
+    }
+
+    #[test]
+    fn common_factor_in_denominators() {
+        assert_eq!(
+            Fraction::new(11, 18),
+            Fraction::new(1, 6).add(Fraction::new(4, 9))
+        )
+    }
+
+    #[test]
+    fn reduce_result_when_denominators_are_equal() {
+        assert_eq!(
+            Fraction::new(3, 2),
+            Fraction::new(3, 4).add(Fraction::new(3, 4))
+        )
+    }
+
+    #[test]
+    fn negative_fraction_and_reducing() {
+        assert_eq!(
+            Fraction::new(1, 2),
+            Fraction::new(-1, 4).add(Fraction::new(3, 4))
+        );
+        assert_eq!(
+            Fraction::new(-1, 8),
+            Fraction::new(3, 8).add(Fraction::new(-1, 2))
+        );
+        assert_eq!(
+            Fraction::new(1, 2),
+            Fraction::new(1, -4).add(Fraction::new(-3, -4))
+        );
+    }
 }
