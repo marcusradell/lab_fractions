@@ -1,5 +1,5 @@
 #[allow(dead_code)]
-fn gcd(a: i64, b: i64) -> i64 {
+pub fn gcd(a: i64, b: i64) -> i64 {
     let mut b = b;
     let mut a = a;
     while b != 0 {

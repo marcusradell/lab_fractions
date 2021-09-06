@@ -1,6 +1,6 @@
 mod equals_test;
 mod fractions_test;
-mod greatest_common_divisor_test;
+mod gcd;
 mod reduce_test;
 
 #[derive(Debug, PartialEq, Eq, Hash)]
@@ -12,9 +12,10 @@ pub struct Fraction {
 #[allow(dead_code)]
 impl Fraction {
     pub fn new(numerator: i64, denominator: i64) -> Fraction {
+        let gcd = gcd::gcd(numerator, denominator);
         Fraction {
-            numerator,
-            denominator,
+            numerator: numerator / gcd,
+            denominator: denominator / gcd,
         }
     }
 
