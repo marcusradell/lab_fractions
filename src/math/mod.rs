@@ -12,7 +12,8 @@ pub struct Fraction {
 #[allow(dead_code)]
 impl Fraction {
     pub fn new(numerator: i64, denominator: i64) -> Fraction {
-        let gcd = gcd::gcd(numerator, denominator);
+        let sign_of_denominator = if denominator < 0 { -1 } else { 1 };
+        let gcd = gcd::gcd(numerator, denominator) * sign_of_denominator;
         Fraction {
             numerator: numerator / gcd,
             denominator: denominator / gcd,
