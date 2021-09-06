@@ -1,5 +1,7 @@
 mod equals_test;
 mod fractions_test;
+mod greatest_common_divisor_test;
+mod reduce_test;
 
 #[derive(Debug, PartialEq, Eq, Hash)]
 pub struct Fraction {
